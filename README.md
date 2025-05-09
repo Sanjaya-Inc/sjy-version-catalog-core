@@ -75,6 +75,3 @@ coroutines = [
     "coroutines-core"
 ]
 ```
-
-For more details, refer to the `core.versions.toml` file in this module.
-```
