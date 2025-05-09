@@ -28,8 +28,8 @@ coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutin
 koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin" }
 koin-core = { group = "io.insert-koin", name = "koin-core" }
 koin-core-coroutines = { group = "io.insert-koin", name = "koin-core-coroutines" }
-koin-annotation = { group = "io.insert-koin", name = "koin-annotation", version.ref = "koin-annotation" }
-koin-ksp = { group = "io.insert-koin", name = "koin-ksp", version.ref = "koin-annotation" }
+koin-annotation = { group = "io.insert-koin", name = "koin-annotations", version.ref = "koin-annotation" }
+koin-ksp = { group = "io.insert-koin", name = "koin-ksp-compiler", version.ref = "koin-annotation" }
 
 # Dependency Injection - Koin Android
 koin-android = { group = "io.insert-koin", name = "koin-android" }
@@ -45,7 +45,6 @@ koin-compose-viewmodel-navigation = { group = "io.insert-koin", name = "koin-com
 
 # Dependency Injection - Koin Integration
 koin-ktor = { group = "io.insert-koin", name = "koin-ktor" }
-koin-slf4j = { group = "io.insert-koin", name = "koin-slf4j" }
 
 # Dependency Injection - Koin Testing
 koin-test = { group = "io.insert-koin", name = "koin-test" }
@@ -57,13 +56,10 @@ koin-nonandroid = [
     "koin-core",
     "koin-core-coroutines",
     "koin-ktor",
-    "koin-slf4j",
+    "koin-compose",
+    "koin-compose-viewmodel",
 ]
 koin-android = [
-    "koin-core",
-    "koin-core-coroutines",
-    "koin-ktor",
-    "koin-slf4j",
     "koin-android",
     "koin-android-compat",
     "koin-androidx-workmanager",
