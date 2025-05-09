@@ -1,5 +1,89 @@
 [versions]
+# Android
+agp = "8.9.2"
+
+# Kotlin
+kotlin = "2.1.20"
+ksp = "2.1.20-2.0.1"
+
+# AndroidX
+core-ktx = "1.16.0"
+
+# Concurrency
+coroutines = "1.10.1"
+
+# Dependency Injection
+koin = "4.0.3"
+koin-annotation = "2.0.1-RC1"
 
 [libraries]
+# AndroidX
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+
+# Concurrency
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Dependency Injection - Koin Core
+koin-bom = { group = "io.insert-koin", name = "koin-bom", version.ref = "koin" }
+koin-core = { group = "io.insert-koin", name = "koin-core" }
+koin-core-coroutines = { group = "io.insert-koin", name = "koin-core-coroutines" }
+koin-annotation = { group = "io.insert-koin", name = "koin-annotation", version.ref = "koin-annotation" }
+koin-ksp = { group = "io.insert-koin", name = "koin-ksp", version.ref = "koin-annotation" }
+
+# Dependency Injection - Koin Android
+koin-android = { group = "io.insert-koin", name = "koin-android" }
+koin-android-compat = { group = "io.insert-koin", name = "koin-android-compat" }
+koin-androidx-workmanager = { group = "io.insert-koin", name = "koin-androidx-workmanager" }
+
+# Dependency Injection - Koin Compose
+koin-compose = { group = "io.insert-koin", name = "koin-compose" }
+koin-compose-viewmodel = { group = "io.insert-koin", name = "koin-compose-viewmodel" }
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose" }
+koin-androidx-compose-navigation = { group = "io.insert-koin", name = "koin-androidx-compose-navigation" }
+koin-compose-viewmodel-navigation = { group = "io.insert-koin", name = "koin-compose-viewmodel-navigation" }
+
+# Dependency Injection - Koin Integration
+koin-ktor = { group = "io.insert-koin", name = "koin-ktor" }
+koin-slf4j = { group = "io.insert-koin", name = "koin-slf4j" }
+
+# Dependency Injection - Koin Testing
+koin-test = { group = "io.insert-koin", name = "koin-test" }
+koin-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4" }
+koin-test-junit5 = { group = "io.insert-koin", name = "koin-test-junit5" }
+
+[bundles]
+koin-nonandroid = [
+    "koin-core",
+    "koin-core-coroutines",
+    "koin-ktor",
+    "koin-slf4j",
+]
+koin-android = [
+    "koin-core",
+    "koin-core-coroutines",
+    "koin-ktor",
+    "koin-slf4j",
+    "koin-android",
+    "koin-android-compat",
+    "koin-androidx-workmanager",
+    "koin-androidx-compose",
+    "koin-androidx-compose-navigation",
+    "koin-compose-viewmodel-navigation",
+]
+koin-test = [
+    "koin-test",
+    "koin-test-junit4",
+    "koin-test-junit5",
+]
+
+coroutines = [
+    "coroutines-core",
+    "coroutines-android",
+]
 
 [plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
