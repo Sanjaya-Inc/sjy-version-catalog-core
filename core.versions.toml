@@ -5,6 +5,7 @@ agp = "8.9.2"
 # Kotlin
 kotlin = "2.1.20"
 ksp = "2.1.20-2.0.1"
+detekt = "1.23.7"
 
 # AndroidX
 core-ktx = "1.16.0"
@@ -15,6 +16,7 @@ coroutines = "1.10.1"
 # Dependency Injection
 koin = "4.0.3"
 koin-annotation = "2.0.1-RC1"
+compose-compiler = "1.7.0"
 
 [libraries]
 # AndroidX
@@ -50,6 +52,12 @@ koin-ktor = { group = "io.insert-koin", name = "koin-ktor" }
 koin-test = { group = "io.insert-koin", name = "koin-test" }
 koin-test-junit4 = { group = "io.insert-koin", name = "koin-test-junit4" }
 koin-test-junit5 = { group = "io.insert-koin", name = "koin-test-junit5" }
+
+plugin-agp = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+plugin-kgp = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+plugin-ksp = { module = "com.google.devtools.ksp:symbol-processing-gradle-plugin", version.ref = "ksp" }
+plugin-compose = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose-compiler" }
+plugin-detekt = { module = " io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 
 [bundles]
 koin-nonandroid = [
