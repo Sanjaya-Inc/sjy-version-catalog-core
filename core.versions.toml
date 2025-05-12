@@ -64,7 +64,7 @@ plugin-detekt = { module = " io.gitlab.arturbosch.detekt:detekt-gradle-plugin", 
 
 detekt-twitter = { module = "com.twitter.compose.rules:detekt", version = "0.0.26" }
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
-detekt-vkompose = { module = "com.vk.vkompose:detekt", version = "0.6" }
+detekt-vkompose = { module = "com.vk.vkompose:detekt", version = "0.7" }
 
 [bundles]
 koin-nonandroid = [
@@ -95,6 +95,7 @@ coroutines = [
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
