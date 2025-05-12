@@ -64,7 +64,6 @@ plugin-detekt = { module = " io.gitlab.arturbosch.detekt:detekt-gradle-plugin", 
 
 detekt-twitter = { module = "com.twitter.compose.rules:detekt", version = "0.0.26" }
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
-detekt-vkompose = { module = "com.vk.vkompose:detekt", version = "0.7" }
 
 [bundles]
 koin-nonandroid = [
