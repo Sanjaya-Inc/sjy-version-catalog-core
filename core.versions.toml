@@ -1,6 +1,6 @@
 [versions]
 # Android
-agp = "8.9.2"
+agp = "8.10.0"
 
 # Kotlin
 kotlin = "2.1.20"
@@ -19,6 +19,13 @@ coroutines = "1.10.1"
 koin = "4.0.3"
 koin-annotation = "2.0.1-RC1"
 compose-compiler = "1.7.0"
+
+ktorfit = "2.5.1"
+mmkv = "2.2.2"
+store = "5.1.0-alpha06"
+app-startup = "1.2.0"
+okhttp = "4.12.0"
+ktor = "3.1.3"
 
 [libraries]
 # AndroidX
@@ -64,6 +71,18 @@ plugin-detekt = { module = " io.gitlab.arturbosch.detekt:detekt-gradle-plugin", 
 
 detekt-twitter = { module = "com.twitter.compose.rules:detekt", version = "0.0.26" }
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+ktorfit = { group = "de.jensklingenberg.ktorfit", name = "ktorfit-lib", version.ref = "ktorfit" }
+
+mmkv = { group = "com.tencent", name = "mmkv", version.ref = "mmkv" }
+store = { module = "org.mobilenativefoundation.store:store5", version.ref = "store" }
+app-startup = { module = "androidx.startup:startup-runtime", version.ref = "app-startup" }
+
+okhttp-bom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttp" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-log = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+ktor-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-serialization = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 
 [bundles]
 koin-nonandroid = [
@@ -92,6 +111,11 @@ coroutines = [
     "coroutines-android",
 ]
 
+okhttp = [
+    "okhttp",
+    "okhttp-log"
+]
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 android-library = { id = "com.android.library", version.ref = "agp" }
@@ -100,3 +124,4 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+ktorfit = { id = "de.jensklingenberg.ktorfit", version.ref = "ktorfit" }
