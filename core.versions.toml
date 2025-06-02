@@ -1,27 +1,27 @@
 [versions]
 # Android
-agp = "8.10.0"
+agp = "8.10.1"
 
 # Kotlin
-kotlin-core = "2.1.20"
-kotlin-serialization = "1.7.3"
+kotlin-core = "2.1.21"
+kotlin-serialization = "1.8.1"
 kotlin-immutable = "0.4.0"
-ksp = "2.1.20-2.0.1"
+ksp = "2.1.21-2.0.1"
 detekt = "1.23.8"
-jvm-target = "17"
+jvm-target = "21"
 
 # AndroidX
 core-ktx = "1.16.0"
 
 # Concurrency
-coroutines = "1.10.1"
+coroutines = "1.10.2"
 
 # Dependency Injection
-koin = "4.0.3"
+koin = "4.0.4"
 koin-annotation = "2.0.1-RC1"
-compose-compiler = "1.7.0"
+compose-compiler = "1.8.1"
 
-ktorfit = "2.5.1"
+ktorfit = "2.5.2"
 mmkv = "2.2.2"
 store = "5.1.0-alpha06"
 app-startup = "1.2.0"
