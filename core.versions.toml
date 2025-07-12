@@ -27,6 +27,7 @@ store = "5.1.0-alpha06"
 app-startup = "1.2.0"
 okhttp = "5.0.0"
 ktor = "3.2.1"
+chucker = "4.1.0"
 
 [libraries]
 # AndroidX
@@ -85,6 +86,9 @@ ktor-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "k
 ktor-serialization = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor" }
+
+chucker = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker" }
+chucker-no-op = { group = "com.github.chuckerteam.chucker", name = "library-no-op", version.ref = "chucker" }
 
 [bundles]
 koin-nonandroid = [
